@@ -21,6 +21,17 @@ public class MyActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
+        btnAdd.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View v) {
+                num1 = Double.parseDouble(firstNumber.getText().toString());
+                num2 = Double.parseDouble(secondNumber.getText().toString());
+                sum = num1 + num2;
+                addResult.setText(Double.toString(sum));
+            }
+        });
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,13 +70,12 @@ public class MyActivity extends AppCompatActivity {
 
     double num1, num2, sum;
 
-    btnAdd.setOnClickListener(new OnClickListener(){
+    public double add(double num1, double num2)
+    {
+        double result;
 
-        public void onClick(View v) {
-            num1 = Double.parseDouble(firstNumber.getText().toString());
-            num2 = Double.parseDouble(secondNumber.getText().toString());
-            sum = num1 + num2;
-            addResult = setText(Double.toString(sum));
-        }
-    });
+        result = num1 + num2;
+
+        return result;
+    }
 }
