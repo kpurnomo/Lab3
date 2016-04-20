@@ -32,9 +32,10 @@ public class JUnit_test extends ActivityInstrumentationTestCase2<MyActivity> {
         EditText firstNumber = (EditText) myActivity.findViewById(R.id.txtNumber1);
         EditText secondNumber = (EditText) myActivity.findViewById(R.id.txtNumber2);
 
-        double num1 = Double.parseDouble(firstNumber.getText().toString());
-        double num2 = Double.parseDouble(secondNumber.getText().toString());
+        double num1 = 5;
+        double num2 = 4;
+        double sum = 9;
 
-        assertEquals(myActivity.add(num1, num2), tester);
+        assertEquals(myActivity.add(num1, num2), 9);
     }
 }
