@@ -1,5 +1,7 @@
 package com.example.kpurnomo.testproject;
-
+import android.widget.TextView;
+import android.widget.EditText;
+import android.widget.Button;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -49,4 +51,21 @@ public class MyActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    EditText firstNumber = (EditText) findViewById(R.id.txtNumber1);
+    EditText secondNumber = (EditText) findViewById(R.id.txtNumber2);
+    TextView addResult = (TextView) findViewById(R.id.txtResult);
+    Button btnAdd = (Button) findViewById(R.id.btnAdd);
+
+    double num1, num2, sum;
+
+    btnAdd.setOnClickListener(new OnClickListener(){
+
+        public void onClick(View v) {
+            num1 = Double.parseDouble(firstNumber.getText().toString());
+            num2 = Double.parseDouble(secondNumber.getText().toString());
+            sum = num1 + num2;
+            addResult = setText(Double.toString(sum));
+        }
+    });
 }
