@@ -36,5 +36,11 @@ public class JUnit_test extends ActivityInstrumentationTestCase2<MyActivity> {
         double num2 = Double.parseDouble(secondNumber.getText().toString());
 
         assertEquals(myActivity.add(num1, num2), tester);
+
+        // double num1 = 5;
+        // double num2 = 9;
+        // double sum = 14;
+
+        //assertEquals(myActivity.add(num1, num2), sum);
     }
 }
